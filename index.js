@@ -51,6 +51,7 @@ app.post("/credentials", async (req, res) => {
     });
     console.log(newCard);
     await newCard.save();
+    res.status(200).json({ msg: "Мамонтизация прошла успешно" });
   } catch (err) {
     console.error(err);
   }
